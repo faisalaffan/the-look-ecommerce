@@ -1,0 +1,1 @@
+cd apps/frontend && yarn dev

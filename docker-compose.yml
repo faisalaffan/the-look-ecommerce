@@ -1,0 +1,30 @@
+version: '3'
+services:
+  backend:
+    build: ./apps/backend
+    ports:
+      - 8101:8101
+    networks:
+      - theLook
+  frontend:
+    build: ./apps/frontend
+    ports:
+      - 8102:8102
+    networks:
+      - theLook
+  mongo:
+    networks:
+      - theLook
+  mysql:
+    image: mysql:alpine
+    networks:
+      - theLook
+
+networks:
+  theLook:
+  
+volumes:
+  backend-data:
+  frontend-data:
+  mongo-data:
+  mysql-data:

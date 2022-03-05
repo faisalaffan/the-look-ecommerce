@@ -1,0 +1,1 @@
+cd apps/backend && yarn start
