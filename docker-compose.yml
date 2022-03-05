@@ -6,17 +6,48 @@ services:
       - 8101:8101
     networks:
       - theLook
+
   frontend:
     build: ./apps/frontend
     ports:
       - 8102:8102
     networks:
       - theLook
+
   mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    ports:
+      - 8103:27017
+    volumes: 
+      - mongo-data:/data/db
     networks:
       - theLook
+
   mysql:
-    image: mysql:alpine
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes: 
+      - mysql-data:/var/lib/mysql
+    ports:
+      - 8104:3306
+    networks:
+      - theLook
+  
+  redis:
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - 8105:6379
+    command: redis-server --save 20 1 --loglevel warning --requirepass root
+    volumes: 
+      - redis-data:/data
     networks:
       - theLook
 
@@ -28,3 +59,4 @@ volumes:
   frontend-data:
   mongo-data:
   mysql-data:
+  redis-data:

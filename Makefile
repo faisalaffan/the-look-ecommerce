@@ -18,3 +18,8 @@ deploy-frontend:
 	bash ./script/deploy-frontend.sh
 deploy-mobile:
 	bash ./script/deploy-mobile.sh
+deploy-all:
+	bash ./script/deploy-all.sh
+
+remote-redis:
+	bash ./script/remote-redis.sh

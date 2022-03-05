@@ -1,0 +1,1 @@
+redis-commander --port 7500 --redis-port 8105 --redis-host localhost --redis-password root
