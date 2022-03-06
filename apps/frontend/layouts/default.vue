@@ -1,92 +1,64 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="clipped = !clipped">
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="fixed = !fixed">
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
-    </v-app-bar>
-    <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
-    </v-main>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light> mdi-repeat </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
-  </v-app>
+  <div>
+    <Nuxt />
+  </div>
 </template>
 
 <script>
 export default {
   name: 'DefaultLayout',
-  data() {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/',
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire',
-        },
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js',
-    }
+  data: () => ({}),
+  head: {
+    title: 'Halaman Home',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: 'Nuxt.js project' },
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat',
+      },
+      { rel: 'stylesheet', href: '/assets/landing/assets/css/preloader.css' },
+      { rel: 'stylesheet', href: '/assets/landing/assets/css/bootstrap.min.css' },
+      { rel: 'stylesheet', href: '/assets/landing/assets/css/owl.carousel.min.css' },
+      { rel: 'stylesheet', href: '/assets/landing/assets/css/animate.min.css' },
+      { rel: 'stylesheet', href: '/assets/landing/assets/css/magnific-popup.css' },
+      { rel: 'stylesheet', href: '/assets/landing/assets/css/meanmenu.css' },
+      { rel: 'stylesheet', href: '/assets/landing/assets/css/animate.min.css' },
+      { rel: 'stylesheet', href: '/assets/landing/assets/css/slick.css' },
+      {
+        rel: 'stylesheet',
+        href: '/assets/landing/assets/css/fontawesome-all.min.css',
+      },
+      { rel: 'stylesheet', href: '/assets/landing/assets/css/themify-icons.css' },
+      { rel: 'stylesheet', href: '/assets/landing/assets/css/nice-select.css' },
+      { rel: 'stylesheet', href: '/assets/landing/assets/css/ui-range-slider.css' },
+      { rel: 'stylesheet', href: '/assets/landing/assets/css/main.css' },
+    ],
+    script: [
+      {
+        src: '/assets/landing/assets/js/jquery.min.js',
+      },
+      { src: '/assets/landing/assets/js/waypoints.min.js' },
+      { src: '/assets/landing/assets/js/bootstrap.bundle.min.js' },
+      { src: '/assets/landing/assets/js/tweenmax.js' },
+      { src: '/assets/landing/assets/js/owl.carousel.min.js' },
+      { src: '/assets/landing/assets/js/slick.min.js' },
+      { src: '/assets/landing/assets/js/jquery-ui-slider-range.js' },
+      { src: '/assets/landing/assets/js/jquery.meanmenu.min.js' },
+      { src: '/assets/landing/assets/js/isotope.pkgd.min.js' },
+      { src: '/assets/landing/assets/js/wow.min.js' },
+      { src: '/assets/landing/assets/js/jquery.scrollUp.min.js' },
+      { src: '/assets/landing/assets/js/countdown.min.js' },
+      { src: '/assets/landing/assets/js/jquery.magnific-popup.min.js' },
+      { src: '/assets/landing/assets/js/parallex.js' },
+      { src: '/assets/landing/assets/js/imagesloaded.pkgd.min.js' },
+      { src: '/assets/landing/assets/js/jquery.nice-select.min.js' },
+      { src: '/assets/landing/assets/js/main.js' },
+    ],
   },
 }
 </script>
