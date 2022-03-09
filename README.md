@@ -6,4 +6,5 @@ Fashion E-commerce Like Lazada. Made From Frontend, Mobile, Backend and Deployme
 - Mobile (Flutter GETX)
 - Database (MongoDb, MySQL, Redis)
 
-https://themepure.net/template/puik-prev/puik/index-6.html#category-area
+https://elements.envato.com/vue-clean-minimal-ecommerce-html5-template-T5RXTXU
+https://elements.envato.com/nazox-vue-js-admin-dashboard-template-ZTKK4SN

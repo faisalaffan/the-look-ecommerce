@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/admin/bindings/admin_binding.dart';
+import '../modules/admin/views/admin_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 
@@ -15,6 +17,11 @@ class AppPages {
       name: _Paths.HOME,
       page: () => HomeView(),
       binding: HomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADMIN,
+      page: () => AdminView(),
+      binding: AdminBinding(),
     ),
   ];
 }
