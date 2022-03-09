@@ -20,7 +20,7 @@
             <div class="col-xl-4 col-lg-5 col-md-4 col-5">
               <div class="logo text-left text-lg-center">
                 <a href="/"
-                  ><img src="/assets/landing/img/logo/logo.png" alt=""
+                  ><img src="/assets/landing/img/logo/logo.svg" alt="" height="80"
                 /></a>
               </div>
             </div>
@@ -59,7 +59,7 @@
         </div>
         <div class="logo-side">
           <a href="/">
-            <img src="/assets/landing/img/logo/logo-white.png" alt="" />
+            <img src="/assets/landing/img/logo/logo-dark.svg" alt="" />
           </a>
         </div>
         <div class="side-info mb-30">
@@ -230,7 +230,7 @@
 
         <div class="side-info-bottom">
           <div class="side-cta">
-            <p>info@example.com</p>
+            <p>faisallionel@gmail.com</p>
             <h4>+(090) 8765 86543 85</h4>
           </div>
           <div class="social-icon-right mt-20">
@@ -268,7 +268,7 @@
               <div class="footer-widget mb-40 pr-70">
                 <div class="footer-logo">
                   <a href="/"
-                    ><img src="/assets/landing/img/logo/footer-logo.png" alt=""
+                    ><img src="/assets/landing/img/logo/logo.svg" alt="" height="80"
                   /></a>
                 </div>
                 <p>

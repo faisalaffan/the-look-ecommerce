@@ -116,7 +116,10 @@
             <div class="product-wrapper mb-50">
               <div class="product-img mb-25">
                 <a href="product-details.html">
-                  <img src="https://themepure.net/template/vue/vue/img/product/pro14.jpg" alt="" />
+                  <img
+                    src="https://themepure.net/template/vue/vue/img/product/pro14.jpg"
+                    alt=""
+                  />
                   <img
                     class="secondary-img"
                     src="https://themepure.net/template/vue/vue/img/product/pro13.jpg"
@@ -181,89 +184,37 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xl-4 col-lg-6 col-md-6">
+          <div
+            class="col-xl-4 col-lg-6 col-md-6"
+            v-for="(item, i) in newsComputed"
+            :key="i"
+          >
             <div class="latest-news mb-40">
               <div class="news__thumb mb-25">
-                <img src="/assets/landing/img/blog/latest/lb8.jpg" alt="" />
+                <img
+                  :src="item.image"
+                  alt=""
+                  class="hoverable"
+                  @click="goTo('/news/' + item.id)"
+                />
               </div>
               <div class="news__caption white-bg">
                 <div class="news-meta mb-15">
                   <span
-                    ><i class="far fa-calendar-check"></i> Sep 15, 2018
+                    ><i class="far fa-calendar-check"></i> {{ item.date }}
                   </span>
                   <span
-                    ><a href="#"
-                      ><i class="far fa-comments"></i> 23 Comments</a
+                    ><a :href="'/news/' + item.id"
+                      ><i class="far fa-comments"></i>
+                      {{ item.comments }} Comments</a
                     ></span
                   >
                 </div>
                 <h2>
-                  <a href="blog-details.html"
-                    >IInspiration Is Construction Fashion 2019.</a
-                  >
+                  <a :href="'/news/' + item.id">{{ item.title }}</a>
                 </h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-6 col-md-6">
-            <div class="latest-news mb-40">
-              <div class="news__thumb mb-25">
-                <img src="/assets/landing/img/blog/latest/lb9.jpg" alt="" />
-              </div>
-              <div class="news__caption white-bg">
-                <div class="news-meta mb-15">
-                  <span
-                    ><i class="far fa-calendar-check"></i> Sep 15, 2018
-                  </span>
-                  <span
-                    ><a href="#"
-                      ><i class="far fa-comments"></i> 23 Comments</a
-                    ></span
-                  >
-                </div>
-                <h2>
-                  <a href="blog-details.html"
-                    >IInspiration Is Construction Fashion 2019.</a
-                  >
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-6 col-md-6">
-            <div class="latest-news mb-40">
-              <div class="news__thumb mb-25">
-                <img src="/assets/landing/img/blog/latest/lb10.jpg" alt="" />
-              </div>
-              <div class="news__caption white-bg">
-                <div class="news-meta mb-15">
-                  <span
-                    ><i class="far fa-calendar-check"></i> Sep 15, 2018
-                  </span>
-                  <span
-                    ><a href="#"
-                      ><i class="far fa-comments"></i> 23 Comments</a
-                    ></span
-                  >
-                </div>
-                <h2>
-                  <a href="blog-details.html"
-                    >IIInspiration Is Construction Fashion 2019.</a
-                  >
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam.
+                  {{ item.description }}
                 </p>
               </div>
             </div>
@@ -314,13 +265,68 @@ import VuetifyLogo from '~/components/VuetifyLogo.vue'
 export default {
   components: { VuetifyLogo },
   name: 'IndexPage',
+  data: () => ({
+    news: [],
+  }),
+  computed: {
+    newsComputed() {
+      return this.news.slice(0, 3)
+    },
+  },
   methods: {
+    getDataNews() {
+      this.news = [
+        {
+          id: 1,
+          title: 'IInspiration Is Construction Fashion 2019.',
+          image:
+            'https://themepure.net/template/vue/vue/img/blog/latest/lb1.jpg',
+          date: 'Sep 15, 2018',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+          comments: 30,
+        },
+        {
+          id: 2,
+          title: 'IInspiration Is Construction Fashion 2019.',
+          image:
+            'https://themepure.net/template/vue/vue/img/blog/latest/lb2.jpg',
+          date: 'Sep 15, 2018',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+          comments: 20,
+        },
+        {
+          id: 3,
+          title: 'IInspiration Is Construction Fashion 2019.',
+          image:
+            'https://themepure.net/template/vue/vue/img/blog/latest/lb3.jpg',
+          date: 'Sep 15, 2018',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+          comments: 1,
+        },
+        {
+          id: 4,
+          title: 'IInspiration Is Construction Fashion 2019.',
+          image:
+            'https://themepure.net/template/vue/vue/img/blog/latest/lb4.jpg',
+          date: 'Sep 15, 2018',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+          comments: 40,
+        },
+      ]
+    },
     async kelik() {
       const emailAddress = 'me@example.com'
       const password = 'abc123'
 
       await this.$store.dispatch('auth/login', { emailAddress, password })
     },
+  },
+  created() {
+    this.getDataNews()
   },
 }
 </script>
