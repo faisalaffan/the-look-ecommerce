@@ -116,10 +116,10 @@
             <div class="product-wrapper mb-50">
               <div class="product-img mb-25">
                 <a href="product-details.html">
-                  <img src="/assets/landing/img/product/pro13.jpg" alt="" />
+                  <img src="https://themepure.net/template/vue/vue/img/product/pro14.jpg" alt="" />
                   <img
                     class="secondary-img"
-                    src="/assets/landing/img/product/pro14.jpg"
+                    src="https://themepure.net/template/vue/vue/img/product/pro13.jpg"
                     alt=""
                   />
                 </a>

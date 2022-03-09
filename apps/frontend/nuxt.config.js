@@ -49,8 +49,14 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'bootstrap-vue/nuxt'
     // '@nuxtjs/vuetify',
   ],
+
+  bootstrapVue: {
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false // Or `bvCSS: false`
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

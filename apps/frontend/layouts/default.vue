@@ -8,7 +8,10 @@
             <div
               class="col-xl-4 col-lg-3 col-md-3 col-7 d-none d-lg-block d-flex align-items-center d-xs-disable"
             >
-              <div class="basic-bar info-bar" @click="sidebarActive = !sidebarActive">
+              <div
+                class="basic-bar info-bar"
+                @click="sidebarActive = !sidebarActive"
+              >
                 <span class="bar1"></span>
                 <span class="bar2"></span>
                 <span class="bar3"></span>
@@ -24,117 +27,15 @@
             <div class="col-xl-4 col-lg-4 col-md-8 col-7 pl-0">
               <div class="header-right header-right-3 f-right">
                 <ul>
-                  <li class="search-btn">
-                    <a class="search-btn nav-search search-trigger" href="#"
-                      ><i class="fas fa-search"></i
-                    ></a>
-                  </li>
                   <li class="login-btn">
-                    <a href="login.html"><i class="far fa-user"></i></a>
+                    <a href="/auth/login"><i class="far fa-user"></i></a>
                   </li>
                   <li class="d-shop-cart">
-                    <a href="#"
-                      ><i class="flaticon-shopping-cart"></i>
-                      <span class="cart-count">3</span></a
-                    >
-                    <ul class="minicart">
-                      <li>
-                        <div class="cart-img">
-                          <a href="product-details.html">
-                            <img
-                              src="/assets/landing/img/product/pro1.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <div class="cart-content">
-                          <h3>
-                            <a href="product-details.html"
-                              >Black & White Shoes</a
-                            >
-                          </h3>
-                          <div class="cart-price">
-                            <span class="new">$ 229.9</span>
-                            <span>
-                              <del>$239.9</del>
-                            </span>
-                          </div>
-                        </div>
-                        <div class="del-icon">
-                          <a href="#">
-                            <i class="far fa-trash-alt"></i>
-                          </a>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="cart-img">
-                          <a href="product-details.html">
-                            <img
-                              src="/assets/landing/img/product/pro2.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <div class="cart-content">
-                          <h3>
-                            <a href="product-details.html"
-                              >Black & White Shoes</a
-                            >
-                          </h3>
-                          <div class="cart-price">
-                            <span class="new">$ 229.9</span>
-                            <span>
-                              <del>$239.9</del>
-                            </span>
-                          </div>
-                        </div>
-                        <div class="del-icon">
-                          <a href="#">
-                            <i class="far fa-trash-alt"></i>
-                          </a>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="cart-img">
-                          <a href="product-details.html">
-                            <img
-                              src="/assets/landing/img/product/pro3.jpg"
-                              alt=""
-                            />
-                          </a>
-                        </div>
-                        <div class="cart-content">
-                          <h3>
-                            <a href="product-details.html"
-                              >Black & White Shoes</a
-                            >
-                          </h3>
-                          <div class="cart-price">
-                            <span class="new">$ 229.9</span>
-                            <span>
-                              <del>$239.9</del>
-                            </span>
-                          </div>
-                        </div>
-                        <div class="del-icon">
-                          <a href="#">
-                            <i class="far fa-trash-alt"></i>
-                          </a>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="total-price">
-                          <span class="f-left">Total:</span>
-                          <span class="f-right">$300.0</span>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="checkout-link">
-                          <a href="/cart">Shopping Cart</a>
-                          <a class="red-color" href="/checkout">Checkout</a>
-                        </div>
-                      </li>
-                    </ul>
+                    <a>
+                      <i class="flaticon-shopping-cart"></i>
+                      <span class="cart-count">3</span>
+                    </a>
+                    <Cart />
                   </li>
                 </ul>
               </div>
@@ -150,7 +51,10 @@
       <div :class="['extra-info', sidebarActive ? 'info-open' : '']">
         <div class="close-icon">
           <button>
-            <i class="far fa-window-close" @click="sidebarActive = !sidebarActive"></i>
+            <i
+              class="far fa-window-close"
+              @click="sidebarActive = !sidebarActive"
+            ></i>
           </button>
         </div>
         <div class="logo-side">
@@ -163,9 +67,7 @@
             <nav id="mobile-menu-3">
               <ul>
                 <li>
-                  <a href="/"
-                    >Home <i class="flaticon-right-arrow"></i
-                  ></a>
+                  <a href="/">Home <i class="flaticon-right-arrow"></i></a>
                   <ul class="submenu">
                     <li>
                       <a href="/">Home Style 1</a>
@@ -185,9 +87,7 @@
                   </ul>
                 </li>
                 <li class="mega-menu">
-                  <a href="/"
-                    >Shop <i class="flaticon-right-arrow"></i
-                  ></a>
+                  <a href="/">Shop <i class="flaticon-right-arrow"></i></a>
                   <ul class="submenu">
                     <li>
                       <a href="#">Category View</a>
@@ -252,9 +152,7 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="/"
-                    >Products <i class="flaticon-right-arrow"></i
-                  ></a>
+                  <a href="/">Products <i class="flaticon-right-arrow"></i></a>
                 </li>
                 <li>
                   <a href="blog.html"
@@ -439,8 +337,9 @@
               <div class="col-xl-12">
                 <div class="copyright text-center">
                   <p>
-                    Copyright © 2022 <a href="https://faisalaffan.com">Faisal Affan</a>. All Rights
-                    Reserved
+                    Copyright © 2022
+                    <a href="https://faisalaffan.com">Faisal Affan</a>. All
+                    Rights Reserved
                   </p>
                 </div>
               </div>
@@ -459,7 +358,7 @@ export default {
   data: () => ({
     drawer: false,
     group: null,
-    sidebarActive: false
+    sidebarActive: false,
   }),
   head: {
     title: 'Halaman Home',
