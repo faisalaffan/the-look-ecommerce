@@ -27,15 +27,15 @@
             <div class="col-xl-4 col-lg-4 col-md-8 col-7 pl-0">
               <div class="header-right header-right-3 f-right">
                 <ul>
-                  <li class="login-btn">
-                    <a href="/auth/login"><i class="far fa-user"></i></a>
-                  </li>
                   <li class="d-shop-cart">
                     <a>
                       <i class="flaticon-shopping-cart"></i>
                       <span class="cart-count">3</span>
                     </a>
                     <Cart />
+                  </li>
+                  <li class="login-btn">
+                    <a href="/auth/login"><i class="far fa-user"></i></a>
                   </li>
                 </ul>
               </div>

@@ -127,7 +127,7 @@
                   />
                 </a>
                 <div class="product-action text-center">
-                  <a href="#" title="Shoppingb Cart">
+                  <a href="#" title="Shopping Cart">
                     <i class="flaticon-shopping-cart"></i>
                   </a>
                   <a href="#" title="Quick View">
